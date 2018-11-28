@@ -7,9 +7,9 @@ class Success extends Component{
     }
     render(){
         return(
-            <div>
-                <h1>Informations enregistrés avec succès.</h1>
-                <button onClick={this.goToList}>Voir la liste des formulaires</button>
+            <div className="formStep">
+                <h2>Informations enregistrées avec succès.</h2>
+                <button className="btn" onClick={this.goToList}>Voir la liste des formulaires</button>
             </div>
         )
     }

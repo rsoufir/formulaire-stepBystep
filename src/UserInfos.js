@@ -60,7 +60,7 @@ class UserInfos extends Component{
                         defaultValue={values.telephone}
                         />
                     </div>
-                    <button type='submit'>Suivant</button>
+                    <button className="btn" type='submit'>Suivant</button>
                 </fieldset>
             </form>
         )

@@ -28,21 +28,21 @@ class Confirmation extends Component{
         const {values: { civilite, nom, prenom, email, telephone, framework, autre }} = this.props;
 
         return(
-            <div>
-                <h1>Récapitulatif</h1>
+            <div className="formStep">
+                <h2>Récapitulatif</h2>
                 <p>Merci de bien vouloir vérifier les informations saisies :</p>
                 <ul>
-                    <li>Civilité : {civilite}</li>
-                    <li>Nom : {nom}</li>
-                    <li>Prénom : {prenom}</li>
-                    <li>Email : {email}</li>
-                    {telephone ? <li>Téléphone : {telephone}</li> : ''}
-                    {framework ? <li>Framework préféré : {framework}</li> : ''}
-                    {autre ? <li>Autre : {autre}</li> : ''}
+                    <li><label>Civilité :</label> {civilite}</li>
+                    <li><label>Nom :</label> {nom}</li>
+                    <li><label>Prénom :</label> {prenom}</li>
+                    <li><label>Email :</label> {email}</li>
+                    {telephone ? <li><label>Téléphone :</label> {telephone}</li> : ''}
+                    {framework ? <li><label>Framework préféré :</label> {framework}</li> : ''}
+                    {autre ? <li><label>Autre :</label> {autre}</li> : ''}
                 </ul>
-                <button onClick={this.precedent}>Précédent</button>
-                <button onClick={this.saveAndContinue}>Enregistrer</button>
-                <button onClick={this.annuler}>Annuler</button>
+                <button className="btn" onClick={this.precedent}>Précédent</button>
+                <button className="btn" onClick={this.saveAndContinue}>Enregistrer</button>
+                <button className="btn" onClick={this.annuler}>Annuler</button>
             </div>
         )
     }

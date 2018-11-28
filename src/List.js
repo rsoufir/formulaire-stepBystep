@@ -7,6 +7,9 @@ class List extends Component{
             forms: []
         }
     }
+    refreshPage = () => {
+        window.location.reload();
+    }
     componentDidMount = () => {
         let baseUrl = "http://localhost:3000/forms";
         fetch(baseUrl)
@@ -15,13 +18,13 @@ class List extends Component{
                 let forms = data.map((form, index) => {
                     return (
                         <div className="form" key={index}>
-                            <p>Civilite : {form.civilite}</p>
-                            <p>Nom : {form.nom}</p>
-                            <p>Prenom : {form.prenom}</p>
-                            <p>Email : {form.email}</p>
-                            {form.telephone ? <p>Téléphone : {form.telephone}</p> : ''}
-                            {form.framework ? <p>Framework préféré : {form.framework}</p> : '' }
-                            {form.autre ? <p>Autre : {form.autre}</p> : '' }
+                            <p><label>Civilite :</label> {form.civilite}</p>
+                            <p><label>Nom :</label> {form.nom}</p>
+                            <p><label>Prenom :</label> {form.prenom}</p>
+                            <p><label>Email :</label> {form.email}</p>
+                            {form.telephone ? <p><label>Téléphone :</label> {form.telephone}</p> : ''}
+                            {form.framework ? <p><label>Framework préféré :</label> {form.framework}</p> : '' }
+                            {form.autre ? <p><label>Autre :</label> {form.autre}</p> : '' }
                         </div>
                     )
                 })
@@ -32,7 +35,8 @@ class List extends Component{
     render(){
         return(
             <div>
-                <h1>Liste des formulaires enregistrés</h1>
+                <h2>Liste des formulaires enregistrés</h2>
+                <button className="btn fixed" onClick={this.refreshPage}>Créer un nouveau formulaire</button>
                 {this.state.forms}
             </div>
         )
