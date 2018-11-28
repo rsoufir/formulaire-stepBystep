@@ -1,0 +1,12 @@
+.form{
+    border: 1px solid #ccc; 
+    padding: 5px; 
+    margin: 20px 10px;
+}
+.formStep{
+    margin: auto;
+    width: 600px;
+}
+.field{
+    padding: 10px 5px;
+}
