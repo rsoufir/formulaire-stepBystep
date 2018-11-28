@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Confirmation extends Component{
     saveAndContinue = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         let baseUrl = "http://localhost:3000/forms";
         let options = {
             method: 'POST',
