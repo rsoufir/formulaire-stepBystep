@@ -8,7 +8,7 @@ class List extends Component{
         }
     }
     refreshPage = () => {
-        window.location.reload();
+        this.props.stepOne();
     }
     componentDidMount = () => {
         let baseUrl = "http://localhost:3000/forms";

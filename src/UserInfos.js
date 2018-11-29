@@ -21,7 +21,7 @@ class UserInfos extends Component{
                         </select>
                     </div>
                     <div className="field">
-                        <label>Nom</label>
+                        <label>Nom*</label>
                         <input
                         type='text'
                         required
@@ -31,7 +31,7 @@ class UserInfos extends Component{
                         />
                     </div>
                     <div className="field">
-                        <label>Prénom</label>
+                        <label>Prénom*</label>
                         <input
                         type='text'
                         required
@@ -41,7 +41,7 @@ class UserInfos extends Component{
                         />
                     </div>
                     <div className="field">
-                        <label>Email</label>
+                        <label>Email*</label>
                         <input
                         required
                         type='email'
@@ -60,7 +60,9 @@ class UserInfos extends Component{
                         defaultValue={values.telephone}
                         />
                     </div>
-                    <button className="btn" type='submit'>Suivant</button>
+                    <div className="buttons">
+                        <button className="btn" type='submit'>Suivant</button>
+                    </div>
                 </fieldset>
             </form>
         )

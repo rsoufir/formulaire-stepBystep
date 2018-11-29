@@ -21,7 +21,7 @@ class Confirmation extends Component{
         this.props.prevStep();
     }
     annuler = (e) => {
-        window.location.reload();
+        this.props.stepOne();
     }
 
     render(){
@@ -40,9 +40,11 @@ class Confirmation extends Component{
                     {framework ? <li><label>Framework préféré :</label> {framework}</li> : ''}
                     {autre ? <li><label>Autre :</label> {autre}</li> : ''}
                 </ul>
-                <button className="btn" onClick={this.precedent}>Précédent</button>
-                <button className="btn" onClick={this.saveAndContinue}>Enregistrer</button>
-                <button className="btn" onClick={this.annuler}>Annuler</button>
+                <div className="buttons">
+                    <button className="btn" onClick={this.precedent}>Précédent</button>
+                    <button className="btn" onClick={this.saveAndContinue}>Enregistrer</button>
+                    <button className="btn" onClick={this.annuler}>Annuler</button>
+                </div>
             </div>
         )
     }

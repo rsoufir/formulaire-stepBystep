@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+body{
+    font-family: 'Muli', Arial, Helvetica, sans-serif;
+    background-color: #d1eeff;
+}
 .form{
     border: 1px solid #ccc; 
     padding: 5px; 
@@ -26,8 +31,16 @@ textarea{
     vertical-align: middle;
 }
 label{
-    font-weight: bold;
     margin-right: 15px;
+}
+legend{
+    font-weight: bold;
+}
+.framework{
+    cursor: pointer;
+}
+input[type="radio"]{
+    cursor: pointer;
 }
 .fixed{
     position: fixed;
@@ -40,4 +53,7 @@ select, input{
 }
 select{
     cursor: pointer;
+}
+.buttons{
+    text-align: right;
 }

@@ -31,6 +31,18 @@ class FormContainer extends Component{
     })
   }
 
+  stepOne = () => {
+    this.setState({
+        step : 1,
+        nom: '',
+        prenom: '',
+        email: '',
+        telephone: '',
+        framework: '',
+        autre: ''
+    })
+  }
+
   handleChange = input => event => {
       this.setState({ [input] : event.target.value })
   }
@@ -57,13 +69,16 @@ class FormContainer extends Component{
           return <Confirmation 
                   nextStep={this.nextStep}
                   prevStep={this.prevStep}
+                  stepOne={this.stepOne}
                   values={values}
                   />
       case 4:
           return <Success nextStep={this.nextStep}  />
 
       case 5:
-          return <List />
+          return <List 
+                 stepOne={this.stepOne}
+                 />
 
       default:
         return <UserInfos 
